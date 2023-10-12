@@ -1,3 +1,0 @@
-D:/Git/cpp-sorting-algorithms/cmake-build-debug/CMakeFiles/cpp_sorting_algorithms.dir
-D:/Git/cpp-sorting-algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Git/cpp-sorting-algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -37,7 +37,7 @@ int Selection_sort:: findSmallestPosition(const int Array[], int start, int end)
             smallestPosition = i;
     }
     return smallestPosition;
-};
+}
 
 void Selection_sort::sort(int Array[], int start, int end){
     int listLength = end + 1;
@@ -47,7 +47,7 @@ void Selection_sort::sort(int Array[], int start, int end){
         int smallestPosition = findSmallestPosition(Array, i, listLength);
         std::swap(Array[i], Array[smallestPosition]);
     }
-};
+}
 
 void Insertion_sort::sort(int Array[], int start, int end) {
     int listLength = end + 1;
@@ -61,7 +61,39 @@ void Insertion_sort::sort(int Array[], int start, int end) {
             j--;
         }
     }
-};
+}
+
+int Quick_sort::partition(int Array[], int start, int pivot){
+    int i = start;
+    while(i < pivot)
+    {
+        if(Array[i] > Array[pivot] && i == pivot-1)
+        {
+            std::swap(Array[i], Array[pivot]);
+            pivot--;
+        }
+
+        else if(Array[i] > Array[pivot])
+        {
+            std::swap(Array[pivot - 1], Array[pivot]);
+            std::swap(Array[i], Array[pivot]);
+            pivot--;
+        }
+
+        else i++;
+    }
+    return pivot;
+}
+
+void Quick_sort::sort (int Array[], int start, int end){
+    if(start < end)
+    {
+        int pivot = partition(Array, start, end);
+
+        sort(Array, start, pivot - 1);
+        sort(Array, pivot + 1, end);
+    }
+}
 
 void Merge_sort::sort(int A[], int p, int r) {
     int q;
@@ -110,3 +142,48 @@ void Merge_sort::merge(int A[], int p, int r, int q) {
     }
 }
 
+void Shell_sort::sort(int Array[], int start, int end){
+    int listLength = end + 1;
+    for(int step = listLength/2; step > 0; step /= 2)
+    {
+        for (int i = step; i < listLength; i += 1)
+        {
+            int j = i;
+            while(j >= step && Array[j - step] > Array[i])
+            {
+                std::swap(Array[j], Array[j - step]);
+                j-=step;
+            }
+        }
+    }
+}
+
+void Heap_sort::heapify(int Array[], int listLength, int root){
+    int largest = root;
+    int l = 2*root + 1;
+    int r = 2*root + 2;
+
+    if (l < listLength && Array[l] > Array[largest])
+        largest = l;
+
+    if (r < listLength && Array[r] > Array[largest])
+        largest = r;
+
+    if (largest != root)
+    {
+        std::swap(Array[root], Array[largest]);
+        heapify(Array, listLength, largest);
+    }
+}
+
+void Heap_sort::sort (int Array[], int start, int end){
+    int listLength = end + 1;
+    for(int i = listLength / 2 - 1; i >= 0; i--)
+        heapify(Array, listLength, i);
+
+    for(int i = listLength - 1; i >= 0; i--)
+    {
+        std::swap(Array[0], Array[i]);
+        heapify(Array, i, 0);
+    }
+}

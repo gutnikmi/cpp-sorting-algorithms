@@ -69,7 +69,11 @@ public:
  * complexity in worst case: O(n^2)
  * */
 
-
+class Quick_sort : public Sorting{
+public:
+    int partition(int Array[], int start, int pivot);
+    void sort (int Array[], int start, int end) override;
+};
 
 /** Merge sorting algorithm
 * complexity in any case: O(n*log n)*/
@@ -82,5 +86,24 @@ public:
     void sort(int A[], int p, int r) override;
 };
 
+/** Shell sorting algorithm
+ * complexity in best case: O(n*logn)
+ * complexity on average: O(n*logn)
+ * complexity in worst case: O(n^2)
+ * */
+
+class Shell_sort : public Sorting {
+public:
+    void sort(int Array[], int start, int end) override;
+};
+
+/** Heap sorting algorithm
+* complexity in any case: O(n*log n)*/
+
+class Heap_sort : public Sorting{
+public:
+    void heapify(int Array[], int listLength, int root);
+    void sort (int Array[], int start, int end) override;
+};
 
 #endif //CPP_PROJECTS_SORT_H

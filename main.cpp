@@ -15,7 +15,7 @@ int main(){
     //auto * s = new Sorter(new Insertion_sort);
     //auto * s = new Sorter(new Quick_sort);
     //auto * s = new Sorter(new Shell_sort);
-    //auto * s = new Sorter(new Shell_sort);
+    auto * s = new Sorter(new Heap_sort);
 
     s->sort(A, 0, length-1);
     delete s;

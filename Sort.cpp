@@ -10,11 +10,11 @@ void Sorter::sort(int Array[], int start, int end) { s->sort( Array,  start,  en
 
 
 void Bubble_sort::sort(int Array[], int start, int end) {
-    int listLength = end + 1;
+    int listLength = end - start + 1;
     while (listLength--) {
         bool swapped = false;
 
-        for (int i = 0; i < listLength; i++) {
+        for (int i = start; i < listLength; i++) {
             if (Array[i] > Array[i + 1]) {
                 std::swap(Array[i], Array[i + 1]);
                 swapped = true;
@@ -40,9 +40,9 @@ int Selection_sort:: findSmallestPosition(const int Array[], int start, int end)
 }
 
 void Selection_sort::sort(int Array[], int start, int end){
-    int listLength = end + 1;
+    int listLength = end - start + 1;
 
-    for(int i = 0; i < listLength; i++)
+    for(int i = start; i < listLength; i++)
     {
         int smallestPosition = findSmallestPosition(Array, i, listLength);
         std::swap(Array[i], Array[smallestPosition]);
@@ -50,12 +50,12 @@ void Selection_sort::sort(int Array[], int start, int end){
 }
 
 void Insertion_sort::sort(int Array[], int start, int end) {
-    int listLength = end + 1;
+    int listLength = end - start + 1;
 
-    for(int i = 1; i < listLength; i++)
+    for(int i = start+1; i < listLength; i++)
     {
         int j = i - 1;
-        while(j >= 0 && Array[j] > Array[j + 1])
+        while(j >= start && Array[j] > Array[j + 1])
         {
             std::swap(Array[j], Array[j + 1]);
             j--;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../Headers/Sort.h"
+#include "Sort.h"
 using namespace std;
 
 

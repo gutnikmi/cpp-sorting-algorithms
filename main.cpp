@@ -1,5 +1,5 @@
 #include<iostream>
-#include"../Headers/Sort.h"
+#include"Sort.h"
 
 int main(){
     //std::cout<<"hello world!";

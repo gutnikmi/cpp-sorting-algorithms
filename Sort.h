@@ -37,8 +37,4 @@ public:
 
     void sort (int A[], int p, int r) override;
 };
-
-
-int test_alg();
-
 #endif //CPP_PROJECTS_SORT_H

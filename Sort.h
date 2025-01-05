@@ -34,8 +34,8 @@ private:
 };
 
 /** Bubble sorting algorithm
- * complexity in best case: O(n)
- * complexity on average: O(n^2)
+ * complexity in best case:  O(n)
+ * complexity on average:    O(n^2)
  * complexity in worst case: O(n^2)
  * */
 
@@ -55,7 +55,7 @@ public:
 };
 
 /** Insertion sorting algorithm
- * complexity in best case: O(n)
+ * complexity in best case:  O(n)
  * complexity in worst case: O(n^2)
  * */
 
@@ -65,7 +65,7 @@ public:
 };
 
 /** Quick sort sorting algorithm
- * complexity in best case: O(n*logn)
+ * complexity in best case:  O(n*log n)
  * complexity in worst case: O(n^2)
  * */
 
@@ -87,8 +87,8 @@ public:
 };
 
 /** Shell sorting algorithm
- * complexity in best case: O(n*logn)
- * complexity on average: O(n*logn)
+ * complexity in best case:  O(n*log n)
+ * complexity on average:    O(n*log n)
  * complexity in worst case: O(n^2)
  * */
 

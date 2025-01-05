@@ -1,5 +1,5 @@
 # cpp-kuznechik-ctr
-An OOP based implementation of a "Sorter" class with different sorting algorithms using the "Strategy" pattern
+A "Sorter" class with different sorting algorithms using the "Strategy" pattern
 ## Algorithms
 | Algorithm      | best case complexity | average complexity | worst case  complexity |
 |:--------------:|:--------------------:|:------------------:|:----------------------:|

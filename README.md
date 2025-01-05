@@ -1,4 +1,4 @@
-# cpp-kuznechik-ctr
+# cpp-sorting-algorithms
 A "Sorter" class with different sorting algorithms using the "Strategy" pattern
 ## Algorithms
 | Algorithm      | best case complexity | average complexity | worst case  complexity |
